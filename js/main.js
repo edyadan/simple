@@ -17,7 +17,11 @@ limitations under the License.
 'use strict';
 
 var constraints = {
-  video: true
+    video: {
+        width: 640,
+        height: 480,
+        facingMode: "environment"
+    }
 };
 
 var video = document.querySelector('video');
