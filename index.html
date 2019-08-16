@@ -28,17 +28,23 @@ ga('send', 'pageview');
       object-fit: cover;
     }
 
-    @media (min-width: 640px) {
+    @media (min-width: 400px) {
       video {
-        height: 480px;
+        height: 300px;
       }
     }
   </style>
 </head>
 <body>
+<a  id="add" href="#">Agregar foto</a> <input name="imgInp" type="text" id="imgInp"/> <a  id="send" href="#">Enviar</a> 
+<table name="tablaimagen" class="table" id="mytable">
   <div id="container">
     <video autoplay playsinline></video>
  </div>
-  <script src="js/main.js"></script>
+ <div>
+     <canvas id='canvas-element'  style="display:none;"></canvas>
+ </div>
+  </table>  
+ <script src="js/main.js"></script>
 </body>
 </html>
