@@ -4,8 +4,8 @@ $(document).ready(
 
     var constraints = {
         video: {
-            width: 400,
-            height: 300,
+            width: 720,
+            height: 576,
             facingMode: "environment"
         }
     };
