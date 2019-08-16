@@ -23,7 +23,6 @@ $(document).ready(
 
     navigator.mediaDevices.getUserMedia(constraints).
       then(handleSuccess).catch(handleError);
-    var video = document.querySelector('video');
     const canvas = document.querySelector('#canvas-element');
     var i = 0;
     <!--setInterval(explode, 100); -->
