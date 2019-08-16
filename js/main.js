@@ -18,8 +18,8 @@ limitations under the License.
 
 var constraints = {
     video: {
-        width: 640,
-        height: 480,
+        width: 400,
+        height: 300,
         facingMode: "environment"
     }
 };
