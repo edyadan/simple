@@ -25,6 +25,7 @@ $(document).ready(
       then(handleSuccess).catch(handleError);
     const canvas = document.querySelector('#canvas-element');
     var i = 0;
+    var imgArray = new Array();
     <!--setInterval(explode, 100); -->
     $( "#add" ).click(function() {
        canvas.width = video.videoWidth;
@@ -33,15 +34,19 @@ $(document).ready(
        var str =  $( "#imgInp" ).val();
        var newElement2 = '<tr><td><div><img id="screenshot-img'+i+'" src=""></div><input name="imgInp'+i+'" type="text" id="imgInp'+i+'" value="'+str+'"/></td></tr>';
        $( "#mytable" ).append( $(newElement2) );
+	   
        const img = document.querySelector('#screenshot-img'+i);
        img.src = canvas.toDataURL('image/png');
+       imgArray[i] = new Image();
+       imgArray[i].src = img.src';    
        i += 1;
+	    
     }); 
     $( "#send" ).click(function() {
 	   const img1 = document.querySelector('#screenshot-img0');
        const show1 = document.querySelector('#show-img1');
        show1.src=img1.src;
-       console.log(img1.src)
+       console.log(imgArray)
     });
     function explode(){
        canvas.width = video.videoWidth;
