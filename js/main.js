@@ -37,16 +37,25 @@ $(document).ready(
 	   
        const img = document.querySelector('#screenshot-img'+i);
        img.src = canvas.toDataURL('image/png');
-       imgArray[i] = new Image();
-       imgArray[i].src = img.src;
+       imgArray[i] = canvas.toDataURL('image/png');
        i += 1;
-	    
     }); 
     $( "#send" ).click(function() {
-	   const img1 = document.querySelector('#screenshot-img0');
-       const show1 = document.querySelector('#show-img1');
-       show1.src=img1.src;
        console.log(imgArray)
+       $.ajax({
+            type: 'POST',
+            url: "http://cosapi.herokuapp.com/process",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(imgArray),
+            success: function (data) {
+                ///status.innerHTML = data;
+                console.log(data)
+                processed.src = 'data:image/png;base64,' + data
+            },
+            error: function () {
+                alert('error');
+            }
+        })
     });
     function explode(){
        canvas.width = video.videoWidth;
