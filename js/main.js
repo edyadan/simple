@@ -44,7 +44,7 @@ $(document).ready(
        console.log(imgArray)
        $.ajax({
             type: 'POST',
-            url: "http://cosapi.herokuapp.com/process",
+            url: "https://cosapi.herokuapp.com/process",
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(imgArray),
             success: function (data) {
