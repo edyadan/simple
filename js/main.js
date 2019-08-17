@@ -37,8 +37,7 @@ $(document).ready(
 	   
        const img = document.querySelector('#screenshot-img'+i);
        img.src = canvas.toDataURL('image/png');
-       imgArray[i] = new Image();
-       imgArray[i].src = img.src';    
+ 
        i += 1;
 	    
     }); 
