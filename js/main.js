@@ -37,7 +37,10 @@ $(document).ready(
 	   
        const img = document.querySelector('#screenshot-img'+i);
        img.src = canvas.toDataURL('image/png');
-       imgArray[i] = canvas.toDataURL('image/png');
+       var myArray = new Array();
+	myArray[1] = canvas.toDataURL('image/png');
+	myArray[2] = str;    
+       imgArray[i] = myArray
        i += 1;
     }); 
     $( "#send" ).click(function() {
