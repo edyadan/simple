@@ -11,7 +11,7 @@ $(document).ready(
     };
 
     var video = document.querySelector('video');
-
+    const processed = document.querySelector('#processed-img');
     function handleSuccess(stream) {
       window.stream = stream; // only to make stream available to console
       video.srcObject = stream;
